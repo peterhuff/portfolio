@@ -95,6 +95,7 @@ body {
 }
 
 .data {
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
