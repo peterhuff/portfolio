@@ -1,26 +1,51 @@
 const db = firebase.firestore();
 
 const contactForm = document.querySelector(".contact-form");
-const name = document.querySelector("#name");
-const email = document.querySelector("#email");
-const subject = document.querySelector("#subject");
-const message = document.querySelector("#message");
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+// const subject = document.getElementById("subject");
+const message = document.getElementById("message");
+const contactModal = document.querySelector(".contact-modal");
+const closeButton = document.querySelector(".contact-modal button");
 
-function getRandomInt() {
-    const minCeiled = Math.ceil(0);
-    const maxFloored = Math.floor(10);
-    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
-}  
+document.addEventListener('invalid', (function(){
+    return function(e) {
+        // prevent default message
+        e.preventDefault();
+        
+        // show "required" text
+        const allRequireds = document.getElementsByClassName("required");
+        for (let i = 0; i < 2; i++) {
+            allRequireds[i].style.display = "inline";
+        }
+    };
+})(), true);
+
+closeButton.addEventListener("click", () => {
+    contactModal.close();
+    document.body.style.position = '';
+    document.body.style.overflow = '';
+});
 
 contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
     db.collection("test").add({
         name: fullName.value,
         email: email.value,
-        subject: subject.value,
-        message: message.value
+        message: message.value,
+        timeStamp: Date.now()
     })
+    .then(() => {
+        contactModal.showModal();
+        document.body.style.height = '100%';
+        document.body.style.overflow = "hidden";    
+    })
+    .catch((error) => {
+        console.error("Error sending message: ", error);
+    });
 });
+
+ 
 
 
 

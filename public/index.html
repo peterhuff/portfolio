@@ -21,7 +21,7 @@
             </menu>
         </nav>
         <div class="content">        
-            <div class="content-box" id="profile">
+            <section class="content-box" id="profile">
                 <div class="title">
                     <h1>Peter Huff</h1>
                     <h2>Software engineer and full-stack developer</h2>
@@ -75,8 +75,8 @@
                 <a class="view-portfolio" href="#projects">
                     View Portfolio &#8595;
                 </a >
-            </div>
-            <div class="content-box" id="projects">
+            </section>
+            <section class="content-box" id="projects">
                 <h1>Key Projects</h1>
                 <div class="projects-box">
                     <h2>Digital Marketplace</h2>
@@ -101,20 +101,41 @@
                         <li>Utilized: HTML/CSS, JavaScript, Excel</li>
                     </ul>
                 </div>
-            </div>
-            <div class="content-box" id="contact">
+            </section>
+            <section class="content-box" id="contact">
                 <h1>Contact Me</h1>
                 <form class="contact-form">
+                    <p>
+                        Have a question or comment for me? Send me a message here and I'll get back to you shortly. Thanks!
+                    </p>
                     <div class="contact-info">
-                        <input type="text" class="form-field" id="name" placeholder="Your Name">
-                        <input type="email" class="form-field" id="email" placeholder="Your Email Address">
+                        <div class="info-field">
+                            <label for="name">Name</label>
+                            <span class="required">(Required)</span>
+                            <input type="text" class="form-field" id="name" placeholder="Your Name" required novalidate>
+                        </div>
+                        <div class="info-field">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-field" id="email" placeholder="Your Email">
+                        </div>
                     </div>
-                    <input type="text" class="form-field" id="subject" placeholder="Subject">
-                    <textarea class="form-field" id="message" placeholder="Message"></textarea>
-                    <button type="submit" id="btn">Submit</button>
+                    <!-- <div>
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-field" id="subject" placeholder="Subject">
+                    </div> -->
+                    <div>
+                        <label for="message">Message</label>
+                        <span class="required">(Required)</span>
+                        <textarea class="form-field" id="message" placeholder="Type your message here" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Submit</button>
                 </form>
-            </div>
+            </section>
         </div>
+        <dialog class="contact-modal">
+            <p>Your message has been sent. Thank you!</p>
+            <button autofocus>Close</button>
+        </dialog>
         <script src="/__/firebase/8.10.1/firebase-app.js"></script>
         <script src="/__/firebase/8.10.1/firebase-firestore.js"></script>
         <script src="/__/firebase/init.js?useEmulator=true"></script>
