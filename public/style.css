@@ -212,7 +212,7 @@ body {
     box-sizing: border-box;
 }
 
-.required {
+.invalid {
     display: none;
     color: red;
 }

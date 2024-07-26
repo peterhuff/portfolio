@@ -111,11 +111,12 @@
                     <div class="contact-info">
                         <div class="info-field">
                             <label for="name">Name</label>
-                            <span class="required">(Required)</span>
+                            <span class="invalid" id="name-required">(Required)</span>
                             <input type="text" class="form-field" id="name" placeholder="Your Name" required novalidate>
                         </div>
                         <div class="info-field">
                             <label for="email">Email</label>
+                            <span class="invalid" id="email-invalid">Invalid Address</span>
                             <input type="email" class="form-field" id="email" placeholder="Your Email">
                         </div>
                     </div>
@@ -125,7 +126,7 @@
                     </div> -->
                     <div>
                         <label for="message">Message</label>
-                        <span class="required">(Required)</span>
+                        <span class="invalid" id="message-required">(Required)</span>
                         <textarea class="form-field" id="message" placeholder="Type your message here" required></textarea>
                     </div>
                     <button type="submit" class="submit-button">Submit</button>
