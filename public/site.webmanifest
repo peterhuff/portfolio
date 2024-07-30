@@ -1,5 +1,5 @@
 {
-    "name": "",
+    "name": "Peter Huff Portfolio",
     "short_name": "",
     "icons": [
         {
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#1b2537",
+    "theme_color": "#808080",
     "background_color": "#1b2537",
     "display": "standalone"
 }
