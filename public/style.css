@@ -27,6 +27,10 @@ body {
     max-width: 60rem;
 }
 
+.content-box h1 {
+    font-size: 2rem;
+}
+
 /* navbar */
 .navbar {
     position: fixed;
@@ -70,6 +74,10 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
+}
+
+.title h1 {
+    margin-bottom: 0;
 }
 
 .title h2 {
@@ -232,6 +240,7 @@ body {
     border-radius: .3rem;
     height: 2rem;
     font-weight: 600;
+    font-size: 0.833;
 
     /* default, black text, gray border */
     /* border: 2px solid gray; */
@@ -286,9 +295,13 @@ body {
         min-height: 40rem;
     }
     
-    h1 {
+    .content-box h1 {
         font-size: 4rem;
         margin: 1rem 0;
+    }
+
+    .content-box h2 {
+        font-size: 2rem;
     }
 
     /* profile */
@@ -337,10 +350,6 @@ body {
     }
 
     /* projects */
-    #projects {
-        
-    }
-
     .projects-box {
         width: 80%;
         margin: 0 auto;
@@ -350,6 +359,9 @@ body {
     #contact {
         padding-top: 3rem;
         padding-bottom: 0;
+    }
+
+    #contact-form {
         font-size: 1rem;
     }
 
